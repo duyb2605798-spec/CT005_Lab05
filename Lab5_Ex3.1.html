@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Infographic chuyên nghiệp: Lợi ích của công nghệ số đối với đời sống ngày nay, thực hiện bởi Nguyễn Khánh Duy - Khóa 52 Trí tuệ Nhân tạo.">
-  <title>Lợi ích của công nghệ số | Infographic</title>
+  <meta name="description" content="Trang giới thiệu cá nhân của Nguyễn Khánh Duy, sinh viên Khóa 52 ngành Trí tuệ Nhân tạo, với các sản phẩm học tập PDF, PNG và video.">
+  <title>Nguyễn Khánh Duy | Hồ sơ cá nhân</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: light;
@@ -295,90 +298,252 @@
       .takeaway { align-items: flex-start; flex-direction: column; gap: 8px; }
       footer { flex-direction: column; gap: 8px; }
     }
+
+    body {
+      background: #f3f5f1;
+      font-family: "Be Vietnam Pro", "Segoe UI", sans-serif;
+    }
+
+    .page-shell { width: min(1120px, calc(100% - 48px)); }
+    .topline { border-color: #d7ddd5; }
+    main { padding-top: 54px; }
+
+    .intro {
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      margin-bottom: 56px;
+      padding: 42px;
+      border-radius: 8px;
+      background: #123d35;
+      color: #fff;
+      grid-template-columns: 1.15fr .85fr;
+    }
+
+    .intro::after {
+      position: absolute;
+      inset: 0 0 0 auto;
+      width: 8px;
+      background: repeating-linear-gradient(to bottom, #f4a261 0 34px, #ffd166 34px 68px);
+      content: "";
+    }
+
+    .eyebrow {
+      padding: 0;
+      background: transparent;
+      color: #f4a261;
+      border-radius: 0;
+      letter-spacing: .12em;
+    }
+
+    h1 {
+      color: #fff;
+      font-family: "Be Vietnam Pro", "Segoe UI", sans-serif;
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 1.02;
+    }
+
+    .author-badge {
+      border-color: rgba(255, 255, 255, .25);
+      background: rgba(255, 255, 255, .08);
+      color: #fff;
+      box-shadow: none;
+    }
+
+    .author-badge span { color: #ffd166; }
+    .intro-note { color: #e2ebe4; border-color: #f4a261; }
+
+    .section-heading { margin-bottom: 22px; }
+    .section-heading h2 {
+      font-family: "Be Vietnam Pro", "Segoe UI", sans-serif;
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .section-heading h2::after {
+      display: block;
+      width: 42px;
+      height: 3px;
+      margin-top: 12px;
+      background: #f4a261;
+      content: "";
+    }
+
+    .products-section { padding-bottom: 56px; }
+    .products-section .section-heading p { color: var(--muted); }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .product {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid #d7ddd5;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(18, 61, 53, .04);
+      animation: rise-in .55s both;
+      transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+    }
+
+    .product:nth-child(2) { animation-delay: .1s; }
+    .product:nth-child(3) { animation-delay: .2s; }
+    .product:hover {
+      transform: translateY(-4px);
+      border-color: #96aaa0;
+      box-shadow: 0 14px 28px rgba(18, 61, 53, .1);
+    }
+
+    .product:last-child { grid-column: 1 / -1; }
+
+    .product-copy { padding: 20px 22px 18px; }
+    .product-kind {
+      margin: 0 0 8px;
+      color: #a84c25;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .product h3 {
+      margin: 0 0 7px;
+      font-family: "Be Vietnam Pro", "Segoe UI", sans-serif;
+      font-size: 23px;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .product-description { margin: 0; color: var(--muted); font-size: 14px; }
+    .product-view { width: 100%; border: 0; border-top: 1px solid #e2e8e0; background: #f8faf7; }
+    .pdf-view { display: block; height: 390px; }
+    .product-view iframe { display: block; width: 100%; height: 100%; border: 0; }
+    .image-view { display: grid; min-height: 390px; place-items: center; padding: 16px; }
+    .image-view img { display: block; max-width: 100%; max-height: 420px; object-fit: contain; }
+    .video-view { aspect-ratio: 16 / 9; }
+    .video-view iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+    @keyframes rise-in {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .product-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: #0f766e;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .video-section { padding-top: 0; }
+    .video-section .section-heading { margin-bottom: 18px; }
+    .video-section .section-heading h2 { font-size: 34px; }
+
+    @media (max-width: 640px) {
+      .page-shell { width: min(100% - 24px, 540px); }
+      .intro { grid-template-columns: 1fr; gap: 20px; padding: 28px 22px; }
+      .product-grid { grid-template-columns: 1fr; }
+      .product:last-child { grid-column: auto; }
+      .pdf-view, .image-view { min-height: 290px; height: 290px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="page-shell">
     <header class="topline">
-      <span class="brand-mark">Infographic Chuyên Đề</span>
+      <span class="brand-mark">Hồ sơ cá nhân</span>
       <span>Trí tuệ Nhân tạo · Khóa 52</span>
     </header>
 
     <main>
       <section class="intro" aria-labelledby="page-title">
         <div>
-          <span class="eyebrow">Kỷ nguyên số & Đời sống</span>
-          <h1 id="page-title">Lợi ích của công nghệ số đối với đời sống.</h1>
+          <span class="eyebrow">Xin chào, mình là</span>
+          <h1 id="page-title">Nguyễn Khánh Duy.</h1>
           <div class="author-badge">
-            Tác giả: <span>Nguyễn Khánh Duy</span> &bull; Khóa 52 - Ngành TTNT
+            Sinh viên <span>Trí tuệ Nhân tạo</span> &bull; Khóa 52
           </div>
         </div>
         <div>
-          <p class="intro-note">Công nghệ số không chỉ là công cụ mà đã trở thành nền tảng cốt lõi định hình lại toàn bộ phong cách sống, học tập và làm việc của con người trong thời đại mới.</p>
+          <p class="intro-note">Chào mừng bạn đến với trang giới thiệu cá nhân của mình. Đây là nơi trưng bày một số sản phẩm học tập và nội dung mình yêu thích.</p>
         </div>
       </section>
 
-      <section class="infographic" aria-labelledby="infographic-title">
+      <section class="products-section" aria-labelledby="products-title">
         <div class="section-heading">
           <div>
-            <h2 id="infographic-title">4 Trụ cột lợi ích nổi bật</h2>
-            <p>Tác động toàn diện đến mọi khía cạnh của xã hội hiện đại</p>
+            <h2 id="products-title">Sản phẩm của mình</h2>
+            <p>Một tuyển tập gồm tài liệu, hình ảnh và video</p>
           </div>
         </div>
 
-        <div class="steps">
-          <article class="step">
-            <div class="step-number" aria-hidden="true">01</div>
-            <h3>Kết nối toàn cầu</h3>
-            <p>Xóa nhòa hoàn toàn khoảng cách địa lý, giúp truyền tải thông tin, giao lưu và hợp tác quốc tế trở nên tức thì.</p>
+        <div class="product-grid">
+          <article class="product">
+            <div class="product-copy">
+              <p class="product-kind">01 · Tài liệu PDF</p>
+              <h3>Lab05_Ex1.2</h3>
+              <p class="product-description">Tài liệu PDF được nhúng trực tiếp để xem trên trang.</p>
+              <a class="product-link" href="Lab05_Ex1.2.pdf" target="_blank" rel="noopener">Mở PDF trong tab mới</a>
+            </div>
+            <div class="product-view pdf-view">
+              <iframe src="Lab05_Ex1.2.pdf" title="Xem tài liệu Lab05_Ex1.2 PDF" loading="lazy"></iframe>
+            </div>
           </article>
-          <article class="step">
-            <div class="step-number" aria-hidden="true">02</div>
-            <h3>Giáo dục & Tri thức</h3>
-            <p>Mở ra kho tàng học tập mở rộng, tạo cơ hội tiếp cận tri thức đỉnh cao cho mọi người bất kể không gian hay thời gian.</p>
-          </article>
-          <article class="step">
-            <div class="step-number" aria-hidden="true">03</div>
-            <h3>Hiệu suất & Tiện ích</h3>
-            <p>Tối ưu hóa quy trình làm việc bằng tự động hóa, dịch vụ công trực tuyến và các hệ sinh thái số thông minh.</p>
-          </article>
-          <article class="step">
-            <div class="step-number" aria-hidden="true">04</div>
-            <h3>Giải trí & Đời sống</h3>
-            <p>Nâng cao chất lượng trải nghiệm cá nhân, chăm sóc sức khỏe chủ động và mang lại cuộc sống tiện nghi hơn.</p>
-          </article>
-        </div>
 
-        <div class="takeaway">
-          <div>
-            <strong>Làm chủ công nghệ - Kiến tạo tương lai số.</strong>
-            <span>Đổi mới tư duy để nắm bắt cơ hội phát triển vượt bậc cùng trí tuệ nhân tạo và công nghệ số.</span>
-          </div>
-        </div>
-      </section>
+          <article class="product">
+            <div class="product-copy">
+              <p class="product-kind">02 · Hình ảnh PNG</p>
+              <h3>Lab05_Ex2.1</h3>
+              <p class="product-description">Ảnh PNG hiển thị ngay bên dưới.</p>
+              <a class="product-link" href="Lab05_Ex2.1.png" target="_blank" rel="noopener">Xem ảnh đầy đủ</a>
+            </div>
+            <div class="product-view image-view">
+              <img src="Lab05_Ex2.1.png" alt="Sản phẩm hình ảnh Lab05 Exercise 2.1" loading="lazy">
+            </div>
+          </article>
 
-      <section class="video-section" aria-labelledby="video-title">
-        <div class="section-heading">
-          <div>
-            <h2 id="video-title">Video Minh Họa</h2>
-            <p>Trực quan hóa tác động của công nghệ số trong thực tiễn</p>
-          </div>
-        </div>
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/d7JTLdjP-Zw"
-            title="Video lợi ích của công nghệ số"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+          <article class="product">
+            <div class="product-copy">
+              <p class="product-kind">03 · Video YouTube</p>
+              <h3>Công nghệ số trong đời sống</h3>
+              <p class="product-description">Video minh họa về tác động của công nghệ số trong thực tiễn.</p>
+              <a class="product-link" href="https://www.youtube.com/watch?v=d7JTLdjP-Zw" target="_blank" rel="noopener">Mở video trên YouTube</a>
+            </div>
+            <div class="product-view video-view">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/d7JTLdjP-Zw"
+                title="Video lợi ích của công nghệ số"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </article>
         </div>
       </section>
     </main>
 
     <footer>
-      <span>Thực hiện: Nguyễn Khánh Duy (Khóa 52 - Trí tuệ Nhân tạo)</span>
-      <span>Hỗ trợ nguồn: Trợ lý AI · Thiết kế giao diện hiện đại</span>
+      <span>Nguyễn Khánh Duy · Khóa 52 · Trí tuệ Nhân tạo</span>
+      <span>Trang giới thiệu cá nhân</span>
     </footer>
   </div>
 </body>
