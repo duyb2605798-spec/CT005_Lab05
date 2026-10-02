@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Infographic chuyên nghiệp: Lợi ích của công nghệ số đối với đời sống ngày nay, thực hiện bởi Nguyễn Khánh Duy - Khóa 52 Trí tuệ Nhân tạo.">
+  <title>Lợi ích của công nghệ số | Infographic</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f8fafc;
+      --ink: #0f172a;
+      --muted: #64748b;
+      --primary: #0f766e;
+      --primary-light: #14b8a6;
+      --accent: #f97316;
+      --accent-bg: #fff7ed;
+      --lime: #bef264;
+      --card-bg: #ffffff;
+      --line: #e2e8f0;
+      --radius: 16px;
+      --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-shell {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark { 
+      color: var(--primary); 
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-mark::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    main { padding: 48px 0 64px; }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 16px;
+      padding: 6px 14px;
+      background: #ccfbf1;
+      color: #0f766e;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 720px;
+      margin-bottom: 20px;
+      font-size: clamp(38px, 5.5vw, 68px);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      line-height: 1.1;
+      color: #0f172a;
+    }
+
+    .author-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 50px;
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .author-badge span {
+      color: var(--primary);
+    }
+
+    .intro-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+      padding-left: 20px;
+      border-left: 3px solid var(--primary-light);
+    }
+
+    .infographic {
+      position: relative;
+      overflow: hidden;
+      padding: 48px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+      color: #ffffff;
+      box-shadow: 0 20px 40px -15px rgba(15, 118, 110, 0.3);
+    }
+
+    .infographic::before {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-end;
+      margin-bottom: 36px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -.02em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 14px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .step {
+      position: relative;
+      padding: 28px 22px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .step-number {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 20px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: var(--lime);
+      color: #1a2e05;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .step p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    .takeaway {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      margin-top: 32px;
+      padding: 22px 28px;
+      border-radius: 12px;
+      background: #fdf4ff;
+      border: 1px solid #f0abfc;
+      color: #581c87;
+    }
+
+    .takeaway strong {
+      font-size: 17px;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .takeaway span {
+      color: #7e22ce;
+      font-size: 13.5px;
+    }
+
+    .video-section { padding-top: 64px; }
+
+    .video-section .section-heading {
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+
+    .video-section .section-heading h2 { font-size: 26px; }
+    .video-section .section-heading p { color: var(--muted); }
+
+    .video-frame {
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius);
+      background: #000000;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+
+    .video-frame iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 24px 0 32px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 640px) {
+      .page-shell { width: min(100% - 24px, 540px); }
+      main { padding: 32px 0 48px; }
+      .intro { grid-template-columns: 1fr; gap: 24px; margin-bottom: 36px; }
+      .infographic { padding: 24px 20px; }
+      .section-heading { align-items: flex-start; flex-direction: column; gap: 8px; }
+      .steps { grid-template-columns: 1fr; gap: 14px; }
+      .takeaway { align-items: flex-start; flex-direction: column; gap: 8px; }
+      footer { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topline">
+      <span class="brand-mark">Infographic Chuyên Đề</span>
+      <span>Trí tuệ Nhân tạo · Khóa 52</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <span class="eyebrow">Kỷ nguyên số & Đời sống</span>
+          <h1 id="page-title">Lợi ích của công nghệ số đối với đời sống.</h1>
+          <div class="author-badge">
+            Tác giả: <span>Nguyễn Khánh Duy</span> &bull; Khóa 52 - Ngành TTNT
+          </div>
+        </div>
+        <div>
+          <p class="intro-note">Công nghệ số không chỉ là công cụ mà đã trở thành nền tảng cốt lõi định hình lại toàn bộ phong cách sống, học tập và làm việc của con người trong thời đại mới.</p>
+        </div>
+      </section>
+
+      <section class="infographic" aria-labelledby="infographic-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="infographic-title">4 Trụ cột lợi ích nổi bật</h2>
+            <p>Tác động toàn diện đến mọi khía cạnh của xã hội hiện đại</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-number" aria-hidden="true">01</div>
+            <h3>Kết nối toàn cầu</h3>
+            <p>Xóa nhòa hoàn toàn khoảng cách địa lý, giúp truyền tải thông tin, giao lưu và hợp tác quốc tế trở nên tức thì.</p>
+          </article>
+          <article class="step">
+            <div class="step-number" aria-hidden="true">02</div>
+            <h3>Giáo dục & Tri thức</h3>
+            <p>Mở ra kho tàng học tập mở rộng, tạo cơ hội tiếp cận tri thức đỉnh cao cho mọi người bất kể không gian hay thời gian.</p>
+          </article>
+          <article class="step">
+            <div class="step-number" aria-hidden="true">03</div>
+            <h3>Hiệu suất & Tiện ích</h3>
+            <p>Tối ưu hóa quy trình làm việc bằng tự động hóa, dịch vụ công trực tuyến và các hệ sinh thái số thông minh.</p>
+          </article>
+          <article class="step">
+            <div class="step-number" aria-hidden="true">04</div>
+            <h3>Giải trí & Đời sống</h3>
+            <p>Nâng cao chất lượng trải nghiệm cá nhân, chăm sóc sức khỏe chủ động và mang lại cuộc sống tiện nghi hơn.</p>
+          </article>
+        </div>
+
+        <div class="takeaway">
+          <div>
+            <strong>Làm chủ công nghệ - Kiến tạo tương lai số.</strong>
+            <span>Đổi mới tư duy để nắm bắt cơ hội phát triển vượt bậc cùng trí tuệ nhân tạo và công nghệ số.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-section" aria-labelledby="video-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="video-title">Video Minh Họa</h2>
+            <p>Trực quan hóa tác động của công nghệ số trong thực tiễn</p>
+          </div>
+        </div>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/d7JTLdjP-Zw"
+            title="Video lợi ích của công nghệ số"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Thực hiện: Nguyễn Khánh Duy (Khóa 52 - Trí tuệ Nhân tạo)</span>
+      <span>Hỗ trợ nguồn: Trợ lý AI · Thiết kế giao diện hiện đại</span>
+    </footer>
+  </div>
+</body>
+</html>
